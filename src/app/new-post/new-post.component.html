@@ -1,0 +1,12 @@
+<h2><strong>Create post</strong></h2>
+<form [formGroup]="postForm" (ngSubmit)="onSubmitForm()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id="title" class="form-control" formControlName="title">
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea rows="5" id="content" class="form-control" formControlName="content"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="postForm.invalid">Submit</button>
+</form>
